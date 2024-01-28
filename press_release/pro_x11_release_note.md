@@ -1,6 +1,6 @@
 ## XXX Pro X11 press_release
 
-XXX Pro X11 is the ideal studio solution for mastering, mixing and recording as well as for music production tasks. With its huge range of sophisticated effects, advanced editing options and a powerful audio engine, the software has been continuously setting new standards in audio for over 30 years.
+XXX Pro X11 is the ideal studio solution for mastering, mixing and recording as well as for music production tasks. With its advanced editing options and a powerful audio engine, the software has set a benchmark for professional audio for over 30 years.
 
 Berlin, June 23, 2022
 
