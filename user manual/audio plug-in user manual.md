@@ -1,6 +1,6 @@
 ### Audio plug-in user manual (US-EN)
 
-## How to use the parameters included in xxxFX Expander
+## How to use the parameters in xxxFX Expander
 
 Input/Gain Reduction: (1) The display shows the waveform of the output signal (gray) and the amount of gain or attenuation of the signal (yellow). You can set the value range for the waveform display and level adjustment independently by right-clicking in the display and selecting a value range. The selected values are displayed in gray and yellow above and below the graph.
 
