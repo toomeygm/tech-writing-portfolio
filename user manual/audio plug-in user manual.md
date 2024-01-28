@@ -1,10 +1,6 @@
-###Audio plug-in user manual (US-EN)
+### Audio plug-in user manual (US-EN)
 
-xxxFX Expander is a dynamic effect that changes the signal gain depending on the input level. If the level falls below a certain value (the threshold), the signal is attenuated by a factor (ratio) for every dB it drops below the threshold. This preserves the loud parts of the audio signal and attenuates the quiet parts. The effect can be used to emphasize the attack of percussion instruments over their decay phases and room ambience in a recording. 
-Expander is also ideal for gradually fading out noise to produce a more natural sound than a pure noise gate, which simply mutes the signal below the threshold completely. It also stretches the dynamic range of an audio signal and, so to speak, works as a counterpart to the compressor, which reduces dynamic range. Expander can therefore also be used to compensate for the effects of excessive compression of a signal.
-A secondary stereo input channel pair can be used to control the effect with sidechaining. The expander is then controlled by another audio signal. This allows the volume of the signal to be controlled by the volume of another signal. For example, you can link the drums and bass more rhythmically by having the drums on one track increase the volume of the bass on another track.
-
-How to use
+## How to use xxxFX Expander
 Input/Gain Reduction: (1) The display shows the waveform of the output signal (gray) and the amount of gain or attenuation of the signal (yellow). You can set the value range for the waveform display and level adjustment independently by right-clicking in the display and selecting a value range. The selected values are displayed in gray and yellow above and below the graph.
 Peak/RMS: (2) There are two modes of input level detection, Peak or RMS. Peak uses the peak level while RMS uses an average over a short period of time. Peak is therefore faster, while RMS is more accurate. 
 Attack/Release: (3) These time values specify how quickly the effect kicks in (Attack) and how long it takes to become inactive again (Release).
