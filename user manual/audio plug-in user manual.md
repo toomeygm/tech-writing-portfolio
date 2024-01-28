@@ -6,21 +6,21 @@ The display shows the waveform of the output signal (gray) and the amount of gai
 **Peak/RMS**  
 There are two modes of input level detection, Peak or RMS. Peak uses the peak level while RMS uses an average over a short period of time. Peak is therefore faster, while RMS is more accurate.
 
-**Attack/Release**
+**Attack/Release**  
 These time values specify how quickly the effect kicks in (Attack) and how long it takes to become inactive again (Release).
 
-**Soft**
+**Soft**  
 The characteristic curve of a dynamic effect has a typical bend, the "knee" at the threshold. Use the Soft Knee parameter to round this curve to make the effect sound more natural.
 
-**Threshold**
+**Threshold**  
 Sets the response threshold below which the control will kick in. Note that, strictly speaking, this is only the case if Soft is set to 0. If the Soft value is above 0, rounding results in a transition range, which means that level reduction already starts a little above the threshold.
 
-**Ratio**
+**Ratio**  
 Controls the expansion ratio. You can see from the characteristic curve that the output signal goes to 0 even when input signals > 0, so the expander acts as a noise gate for very low levels.
 
 xxxFX Expander works as a "downward expander", meaning that dynamic processing starts below the threshold and then works downwards. For example, with a set ratio of 2, this means that when the input level is reduced by 3 dB, the output level drops by 6 dB. The larger the ratio value, the faster the signal drops.
 
-**Out Gain**
+**Out Gain**  
 After the signal is processed by the variable amplifier according to the volume of the input signal, there is a reduction in volume. You can use the Out Gain fader to compensate for this. Out gain is also known as makeup gain.
 
 **Mix**: Adjusts the balance between unprocessed (dry) and processed (wet) audio signal.
