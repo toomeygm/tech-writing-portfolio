@@ -5,10 +5,9 @@ This is a repository to store and manage my technical writing portfolio.
 My technical writing samples are categorized into the following documentation types:
 
 * Explainers
-* How-tos
-* Quick start guides
-* Reference guides
-* Tutorials
+* Quick start guide
+* SEO article on CMS
+* Press release
 
 # Writing samples – Gráinne Toomey
 
