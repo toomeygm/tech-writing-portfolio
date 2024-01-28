@@ -1,6 +1,4 @@
-Audio plug-in user manual (US-EN)
-
-For this text, I collaborated with developers and asked questions about specific effects in order to document for the user how the plug-in works. Consulting guides for similar plug-ins and researching the topic was also essential for creating the document.
+###Audio plug-in user manual (US-EN)
 
 xxxFX Expander is a dynamic effect that changes the signal gain depending on the input level. If the level falls below a certain value (the threshold), the signal is attenuated by a factor (ratio) for every dB it drops below the threshold. This preserves the loud parts of the audio signal and attenuates the quiet parts. The effect can be used to emphasize the attack of percussion instruments over their decay phases and room ambience in a recording. 
 Expander is also ideal for gradually fading out noise to produce a more natural sound than a pure noise gate, which simply mutes the signal below the threshold completely. It also stretches the dynamic range of an audio signal and, so to speak, works as a counterpart to the compressor, which reduces dynamic range. Expander can therefore also be used to compensate for the effects of excessive compression of a signal.
