@@ -1,9 +1,9 @@
 ## An explanation of the parameters in xxxFX Expander
 
-**Input/Gain Reduction**
+**Input/Gain Reduction**  
 The display shows the waveform of the output signal (gray) and the amount of gain or attenuation of the signal (yellow). You can set the value range for the waveform display and level adjustment independently by right-clicking in the display and selecting a value range. The selected values are displayed in gray and yellow above and below the graph.
 
-**Peak/RMS**
+**Peak/RMS**  
 There are two modes of input level detection, Peak or RMS. Peak uses the peak level while RMS uses an average over a short period of time. Peak is therefore faster, while RMS is more accurate.
 
 **Attack/Release**
