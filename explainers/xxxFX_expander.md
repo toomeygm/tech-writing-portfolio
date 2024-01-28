@@ -14,7 +14,7 @@ It also stretches the dynamic range of an audio signal. In this way, it works as
 * A secondary stereo input channel pair can be used to control the effect with sidechaining. The expander is then controlled by another audio signal. This allows the volume of the signal to be controlled by the volume of another signal. 
 For example, you can link the drums and bass more rhythmically by having the drums on one track increase the volume of the bass on another track.
 
-## Using Sidechaining with xxxFX Expander
+## Using sidechaining with xxxFX Expander
 
 ### Sidechain controls and filter
 
