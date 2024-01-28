@@ -23,6 +23,7 @@ xxxFX Expander works as a "downward expander", meaning that dynamic processing s
 **Out Gain**  
 After the signal is processed by the variable amplifier according to the volume of the input signal, there is a reduction in volume. You can use the Out Gain fader to compensate for this. Out gain is also known as makeup gain.
 
-**Mix**: Adjusts the balance between unprocessed (dry) and processed (wet) audio signal.
+**Mix**
+Adjusts the balance between unprocessed (dry) and processed (wet) audio signal.
 Please note that expander processing results are highly dependent upon input level. After loading a preset, you will still need to adjust the threshold to the current audio material to achieve the results you want.
 
