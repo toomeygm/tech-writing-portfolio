@@ -14,4 +14,4 @@ Optimizing conversion rates is vital for any online marketing strategy. Adopting
 
 Part of this approach is removing all barriers to the best possible user experience — and one barrier is slow page speed.
  
-Faster page loads mean lower bounce rates, since even a one-second delay significantly decreases conversions. To speed up loading, you need a fast-rendering CMS that delivers quick responses and handles heavy site traffic. This will help you to retain your audience and maximize your conversion rate.
+Faster page loads mean lower bounce rates, since even a one-second delay can significantly decrease conversions. To speed up loading, you need a fast-rendering CMS that delivers quick responses and handles heavy site traffic. This will help you retain your audience and maximize your conversion rate.
