@@ -1,0 +1,24 @@
+Audio plug-in user manual (US-EN)
+
+For this text, I collaborated with developers and asked questions about specific effects in order to document for the user how the plug-in works. Consulting guides for similar plug-ins and researching the topic was also essential for creating the document.
+
+xxxFX Expander is a dynamic effect that changes the signal gain depending on the input level. If the level falls below a certain value (the threshold), the signal is attenuated by a factor (ratio) for every dB it drops below the threshold. This preserves the loud parts of the audio signal and attenuates the quiet parts. The effect can be used to emphasize the attack of percussion instruments over their decay phases and room ambience in a recording. 
+Expander is also ideal for gradually fading out noise to produce a more natural sound than a pure noise gate, which simply mutes the signal below the threshold completely. It also stretches the dynamic range of an audio signal and, so to speak, works as a counterpart to the compressor, which reduces dynamic range. Expander can therefore also be used to compensate for the effects of excessive compression of a signal.
+A secondary stereo input channel pair can be used to control the effect with sidechaining. The expander is then controlled by another audio signal. This allows the volume of the signal to be controlled by the volume of another signal. For example, you can link the drums and bass more rhythmically by having the drums on one track increase the volume of the bass on another track.
+
+How to use
+Input/Gain Reduction: (1) The display shows the waveform of the output signal (gray) and the amount of gain or attenuation of the signal (yellow). You can set the value range for the waveform display and level adjustment independently by right-clicking in the display and selecting a value range. The selected values are displayed in gray and yellow above and below the graph.
+Peak/RMS: (2) There are two modes of input level detection, Peak or RMS. Peak uses the peak level while RMS uses an average over a short period of time. Peak is therefore faster, while RMS is more accurate. 
+Attack/Release: (3) These time values specify how quickly the effect kicks in (Attack) and how long it takes to become inactive again (Release).
+Soft: (4) The characteristic curve of a dynamic effect has a typical bend, the "knee" at the threshold. With the Soft value you can more or less round this curve to make the effect sound more natural (this is called "soft knee").
+Threshold: (5) This sets the response threshold below which the control will kick in. Note that, strictly speaking, this is only the case if Soft is set to 0. If the Soft value is above 0, rounding results in a transition range, which means that level reduction already starts a little above the threshold.
+Ratio: (6) You can control the expansion ratio using this parameter.
+You can see from the characteristic curve that the output signal goes to 0 even when input signals > 0, so the expander acts as a noise gate for very low levels.
+xxxFX Expander works as a "downward expander", meaning that dynamic processing starts below the threshold and then works "downwards". For example, with a set ratio of 2, this means that when the input level is reduced by 3 dB, the output level drops by 6 dB. The larger the ratio value, the faster the signal drops.
+Out Gain: (7) After the signal is processed by the variable amplifier according to the volume of the input signal, there is a reduction in volume. The Out Gain fader can be used to compensate for this. Out gain is also known as "makeup gain".
+Mix: (8) Adjusts the balance between unprocessed (dry) and processed (wet) audio signal.
+Please note that expander processing results are highly dependent upon input level. After loading a preset, you will still need to adjust the threshold to the current audio material to achieve the results you want.
+
+Sidechain controls and filter
+A sidechain is a secondary stereo input channel pair that can be used to control the expander using a different signal to the one being processed. For instance, you can link the drums and bass more rhythmically by using the expander on the bass track and controlling it using the kick drum on another track.
+Your host software must support sidechaining, i.e. it must be able to route audio from one track (or bus) into the additional inputs (3/4) of the plug-in on another track. Check your host software manual to find out if and how you can do this in your host software.
