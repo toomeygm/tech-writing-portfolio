@@ -2,7 +2,7 @@
 
 XXX Pro X11 is the ideal studio solution for mastering, mixing and recording as well as for music production tasks. With its advanced editing options and a powerful audio engine, the software has set a benchmark for professional audio for over 30 years.
 
-Berlin, June 23, 2022
+Berlin, October 23, 2023
 
 The latest versions of XXX Pro X11 and XXX Pro X11 Suite offer composers, musicians, producers, and audio engineers one-of-a-kind functions and revolutionary workflows – with more efficiency, detail and control for achieving the perfect sound.
 
