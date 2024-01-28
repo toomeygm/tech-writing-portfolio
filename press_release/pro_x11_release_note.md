@@ -6,7 +6,7 @@ Berlin, June 23, 2022
 
 The latest versions of XXX Pro X11 and XXX Pro X11 Suite offer composers, musicians, producers, and audio engineers one-of-a-kind functions and revolutionary workflows – with more efficiency, detail and control for achieving the perfect sound.
 
-**Improved export workflow**  
+###Improved export workflow###
 
 Audio file export is a core task in any DAW. The export workflow in XXX Pro X11 has been optimized to provide a new clear structure and a modern, sleek design that offers an optimal overview of all essential creative options. This allows for improved access to your most frequently used export formats, enabling faster export.
 
