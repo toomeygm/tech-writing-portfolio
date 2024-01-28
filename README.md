@@ -1,4 +1,4 @@
-mic# tech-writing-portfolio
+# tech-writing-portfolio
 This is a repository to store and manage my technical writing portfolio.
 
 # Documentation types
@@ -14,7 +14,7 @@ My technical writing samples are categorized into the following documentation ty
 
 |   Document    | Document Type |   Description  |
 | ------------- | ------------- |  ------------- | 
-| Content Cell  | Content Cell  |  Content Cell  | 
+| Content Cell  | Content Cell  |  Content Cellkkkl' jjjj  | 
 | Content Cell  | Content Cell  |  Content Cell  |
 | Case Study    | Explanation   |  Content Cell  | 
 | Content Cell  | Content Cell  |  Content Cell  |
