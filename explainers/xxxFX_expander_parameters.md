@@ -10,7 +10,7 @@ There are two modes of input level detection, Peak or RMS. Peak uses the peak le
 These time values specify how quickly the effect kicks in (Attack) and how long it takes to become inactive again (Release).
 
 **Soft**  
-The characteristic curve of a dynamic effect has a typical bend, the "knee" at the threshold. Use the Soft Knee parameter to round this curve to make the effect sound more natural.
+The characteristic curve of a dynamic effect has a typical bend, the "knee" at the threshold. Use the Soft Knee parameter to round this curve and make the effect sound more natural.
 
 **Threshold**  
 Sets the response threshold below which the control will kick in. Note that, strictly speaking, this is only the case if Soft is set to 0. If the Soft value is above 0, rounding results in a transition range, which means that level reduction already starts a little above the threshold.
