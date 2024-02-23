@@ -9,7 +9,6 @@ My technical writing samples are categorized into the following documentation ty
 * Release note
 * SEO article on CMS
 
-> **_NOTE:_**  The note content.
 
 
 # Writing samples – Gráinne Toomey
