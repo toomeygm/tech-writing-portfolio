@@ -1,0 +1,181 @@
+# API style guide
+
+<!-- vale off -->
+
+- [You write customer-facing content](#you-write-customer-facing-content)
+- [OpenAPI specs](#openapi-specs)
+  - [Endpoints/operations](#endpointsoperations)
+    - [Summary](#summary)
+    - [OperationId](#operationid)
+    - [Description](#description)
+    - [Parameters and properties](#parameters-and-properties)
+    - [Tags](#tags)
+    - [Backend](#backend)
+  - [Tags/resources](#tagsresources)
+    - [What do they do?](#what-do-they-do)
+    - [Creating a tag](#creating-a-tag)
+
+## You write customer-facing content
+
+Follow this style guide to keep the API documentation consistent and to provide a uniform
+reading experience to the users.
+
+The style guide covers 4 OAS properties: `tag`, `summary` `operationId` and `description`.
+These properties are customer-facing!
+
+![output](api-output.png)
+
+## OpenAPI specs
+
+We use [OpenAPI specs](http://spec.openapis.org/oas/v3.0.2) to describe our APIs.
+
+### Endpoints/operations
+
+<img src="api-swagger.png"/>
+
+#### Summary
+
+The majority of endpoints should be simple CRUD operations.
+
+1. Use the imperative form and use these verb in priority: `create`, `update`, `get`, `list`.
+1. If the endpoint returns an array of resources, use `list`.
+1. If the endpoint returns one resource, use `get`.
+1. Do not use articles for simple summaries.
+1. No punctuation.
+
+Examples:
+
+| Do              | Don't                      |
+| --------------- | -------------------------- |
+| Create coupon   | Create my coupon           |
+| Get customer    | Get the info of a customer |
+| List referrals  | List the referrals         |
+| Delete customer | Delete a specific customer |
+
+For the remaining endpoints that do not strictly fit these simple naming conventions, try to keep the summary short.
+
+#### OperationId
+
+Used to generate an anchor to the endpoint in the HTML output. Should be similar to the summary.
+No dashes in the value!
+
+Example:
+
+| Do           | Don't           |
+| ------------ | --------------- |
+| createCoupon | create-a-coupon |
+
+#### Description
+
+1. ⚠️ Must exist. One or more sentences. Capital letter and full stop.
+1. Imperative tense, not 3rd person (`Create...` vs `Creates...`)
+1. The first sentence explains the objective of the endpoint. Add an example use case
+   if it helps the user.
+1. Use following paragraphs to explain the details or gotchas.
+1. Final paragraph provides links to related endpoints, if needed.
+
+Examples:
+
+| Do                          | Don't                        |
+| --------------------------- | ---------------------------- |
+| Return the list of users... | Returns the list of users... |
+
+Also see:
+
+- [Create coupon reservation](/integration-api#operation/createCouponReservation) explains the type of reservations, and potential use cases for this endpoint.
+- [Create audience](/integration-api#operation/createAudienceV2): explains various ways to use the endpoint.
+
+#### Parameters and properties
+
+1. They must have a description. The description is a sentence or more: Capital letters and full stops.
+1. They do not <i>do</i> things, they <i>represent</i> things, so their description must not start with a verb.
+
+    | Do                                              | Don't                                                    |
+    | ------------------------------------------------| -------------------------------------------------------- |
+    | `"id": The identifier of the customer profile.` |`"id": Links this object to that object.`                 |
+    | `"time": Time when something happened.`         | `"time": Represents the moment when something happened.` |
+
+1. Use markdown to generate cleaner output for our users. Enable markdown with a pipe
+  and carriage return:
+
+    | Swagger   | Output |
+    | --------- | ------ |
+    | <pre>"description": \| <br />  Use one of the following values:<br /> - `value 1`<br /> - `value 2`<br /> - `value 3`</pre>| ![List in Output](list-in-output.png) |
+
+1. Each <i>property</i> must have a <code>example</code> field; use a realistic value.
+
+    | Do                                    | Don't                               |
+    | --------------------------------------| ------------------------------------|
+    | `"ruleName": "10% off with coupon"`   | `"ruleName": "my rule name"`        |
+    | `"atttributeName": "ShippingCity"`    | `"attributeName": "some_attribute"` |
+
+1. Don't capitalize acronyms in camel-cased parameters.
+
+    | Do                 | Don't                |
+    | ------------------ | ---------------------|
+    | `loyaltyProgramId` | `loyaltyProgramID`   |
+    | `dataApiKey`       | `dataAPIKey`         |
+
+#### Tags
+
+Tags are customer facing. Every endpoint must have at least [one tag](#tagsresources).
+Choose your tag carefully, and don't copy tags randomly from other endpoints.
+
+**Note about exclude-from-docs**: If you do **not** want the endpoint to
+appear in the documentation, add the `exclude-from-docs`.
+
+#### OperationId
+
+When starting the application, the swagger file is parsed and the operation IDs are used to
+name the routes defined on the server.
+
+The routes on the server and the paths (and the name of URL parameters) in swagger must
+match. If they don't, the application stops
+with the error: `failed to define route names: no operation id found for ...`
+
+### Tags/resources
+
+Tags, or resources, contain endpoints. For example, the `Coupons` resource contains the
+`Create coupon` and `Get coupon` endpoints.
+
+In OAS, tags are declared then added to individual endpoints.
+
+<b>Assigning a tag</b>
+
+```yaml
+/v1/applications/{applicationId}/campaigns:
+   post:
+      operationId: createCampaign
+      summary: Create a Campaign
+      description: ""
+      tags:
+      - Campaigns
+```
+
+#### What do they do?
+
+Tags are used to group endpoints in the left menu in the docs to give an overview to
+users. See the screenshot at the top of the page.
+
+If you choose the wrong tag, you will confuse the users. For example if you move
+`Create a coupon` into the `Referral` section, no one will find it in `Coupons`.
+
+**Note about exclude-from-docs**: If you do **not** want the endpoint to
+appear in the documentation, add the `exclude-from-docs` tag.
+
+#### Creating a tag
+
+```yaml
+tags:
+- name: Campaigns
+  description: |
+   Campaigns are the primary resource used to control the behavior of the Talon.One Rule Engine. They combine rulesets, coupons, and limits into a single unit.
+```
+
+Respect the following guide lines to create a tag:
+
+1. Use a noun in plural. For example `Campaigns`.
+1. The tag has a business name that means something to the integrator. For example `Coupons`.
+1. It is defined at the top of the specs file. It has a `description` property.
+   See an [example](See the [Talon.One specs](https://github.com/talon-one/talon-service/blob/master/swagger.yaml#L51).
+1. Assign it to an endpoint. See an [example](https://github.com/talon-one/talon-service/blob/master/swagger.yaml#L137)
